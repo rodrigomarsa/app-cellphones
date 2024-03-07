@@ -1,0 +1,18 @@
+.container {
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+}
+
+.container button {
+  margin-top: 10px;
+}
+
+.container p {
+  color: red;
+}
