@@ -1,9 +1,9 @@
 require('dotenv').config();
 
-const environment = process.env.NODE_ENV || 'development';
+const environment = process.env.NODE_ENV || 'production';
 
 const suffix = {
-  dev: '-dev',
+  production: '-prod',
   development: '-dev',
   test: '-test',
 };
@@ -17,13 +17,13 @@ const options = {
   username: process.env.DB_USER || 'postgres',
   password: process.env.DB_PASSWORD || '1234',
   dialect: 'postgres',
-  dialectOptions: {
-    timezone: 'Z',
-  },
   logging: false,
 };
 
 module.exports = {
+  production: {
+    ...options,
+  },
   development: {
     ...options,
   },

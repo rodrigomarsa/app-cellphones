@@ -11,7 +11,7 @@ module.exports = {
           brand: 'Apple',
           model: 'iPhone 13',
           price: 799.99,
-          color: 'Black',
+          color: 'Preto',
           user_id: 1,
         },
         {
@@ -19,7 +19,7 @@ module.exports = {
           brand: 'Samsung',
           model: 'Galaxy S21',
           price: 699.99,
-          color: 'White',
+          color: 'Branco',
           user_id: 1,
         },
         {
@@ -27,7 +27,7 @@ module.exports = {
           brand: 'Motorola',
           model: 'Moto G100',
           price: 499.99,
-          color: 'Blue',
+          color: 'Azul',
           user_id: 1,
         },
       ],
