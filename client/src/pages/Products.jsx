@@ -82,19 +82,23 @@ function ProductsPage() {
           <li key={ product.id }>
             <h3>{product.name}</h3>
             <p>
-              Brand:
+              Marca:
+              {' '}
               {product.brand}
             </p>
             <p>
-              Model:
+              Modelo:
+              {' '}
               {product.model}
             </p>
             <p>
-              Price: $
+              Preço: R$
+              {' '}
               {product.price}
             </p>
             <p>
-              Color:
+              Cor:
+              {' '}
               {product.color}
             </p>
             <button onClick={ () => handleEditProduct(product.id) }>Editar</button>
