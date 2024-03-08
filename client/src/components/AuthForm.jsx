@@ -38,7 +38,7 @@ function AuthForm({ email, setEmail, password, setPassword, onSubmit, buttonText
       <input
         type="password"
         name="password"
-        placeholder="Password"
+        placeholder="Senha maior que 6 caracteres"
         value={ password }
         onChange={ handleChange }
         required
