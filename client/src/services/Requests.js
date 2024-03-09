@@ -5,9 +5,6 @@ const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
 const api = axios.create({
   baseURL: `${PROTOCOL}://${HOST}`,
-  headers: {
-    Authorization: '',
-  },
 });
 
 export const setToken = (token) => {
