@@ -13,11 +13,7 @@ const acessControl = (req, res, next) => {
   app.use(cors());
   next();
 };
-app.use(
-  cors({
-    origin: '*',
-  }),
-);
+
 app.use(express.json());
 app.use(acessControl);
 
