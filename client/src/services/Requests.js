@@ -3,10 +3,11 @@ import axios from 'axios';
 const HOST = process.env.REACT_APP_API_HOST || 'localhost:3001';
 const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
 const api = axios.create({
   baseURL: `${PROTOCOL}://${HOST}`,
+  headers: {
+    'Access-Control-Allow-Origin': '*',
+  },
 });
 
 export const setToken = (token) => {
