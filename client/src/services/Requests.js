@@ -6,7 +6,7 @@ const PROTOCOL = process.env.REACT_APP_API_PROTOCOL || 'http';
 const api = axios.create({
   baseURL: `${PROTOCOL}://${HOST}`,
   headers: {
-    'Access-Control-Allow-Origin': '*',
+    'Content-Type': 'application/json',
   },
 });
 

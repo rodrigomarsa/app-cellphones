@@ -9,15 +9,27 @@ const suffix = {
 };
 
 const options = {
-  host: process.env.DB_HOST || 'localhost',
-  port: process.env.DB_PORT || '5432',
-  database: `${process.env.DB_NAME || 'cellphones-api'}${
+  host: process.env.POSTGRES_HOST || 'localhost',
+  port: process.env.POSTGRES_PORT || '5432',
+  database: `${process.env.POSTGRES_DATABASE || 'cellphones-api'}${
     suffix[environment] || suffix.test
   }`,
-  username: process.env.DB_USER || 'postgres',
-  password: process.env.DB_PASSWORD || '1234',
+  username: process.env.POSTGRES_USER || 'postgres',
+  password: process.env.POSTGRES_PASSWORD || '1234',
   dialect: 'postgres',
-  logging: false,
+  protocol: 'postgres',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false,
+    },
+  },
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000,
+  },
 };
 
 module.exports = {
